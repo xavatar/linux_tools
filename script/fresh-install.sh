@@ -126,6 +126,17 @@ sudo pacman -U mingw-w64-gcc-9.3.0-1-x86_64.pkg.tar.xz
 echo ""
 echo ""
 echo "*****************************"
+echo "Install proton-tkg"
+echo "*****************************"
+sleep 3
+wget https://github.com/xavatar/proton-tkg/releases/download/5.4.r10.g7c7868f4/proton_tkg_5.4.r10.g7c7868f4.tar.gz
+mkdir -p ~/.steam/root/compatibilitytools.d
+tar xvfz proton_tkg_5.4.r10.g7c7868f4.tar.gz
+mv proton_tkg_5.4.r10.g7c7868f4 ~/.steam/root/compatibilitytools.d
+
+echo ""
+echo ""
+echo "*****************************"
 echo " FINISH "
 echo "*****************************"
 
