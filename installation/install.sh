@@ -64,6 +64,7 @@ pacman -U vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
 echo ""
 echo "Wine Staging TKG"
 echo ""
+pamac install giflib lib32-giflib libpng lib32-libpng  libldap lib32-libldap gnutls lib32-gnutls mpg123 lib32-mpg123 openal  lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse  libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib  lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite  libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt   lib32-libxinerama ncurses lib32-ncurses opencl-icd-loader  lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva gtk3  lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs
 wget https://github.com/xavatar/wine-staging-tkg/releases/download/git-5.4.r10.g7c7868f4-254/wine-tkg-staging-fsync-vkd3d-git-5.4.r10.g7c7868f4-254-x86_64.pkg.tar.xz
 pacman -U wine-tkg-staging-fsync-vkd3d-git-5.4.r10.g7c7868f4-254-x86_64.pkg.tar.xz
 
