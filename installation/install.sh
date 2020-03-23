@@ -13,9 +13,7 @@ pamac update
 echo ""
 echo "Installation des logs divers"
 echo ""
-pamac install ccache
-pamac install vim
-pamac install whatsapp-nativefier
+pamac install ccache vim nodejs-nativefier whatsapp-nativefier
 
 
 # Sublime Text
@@ -33,6 +31,6 @@ echo "Installation Teams"
 echo ""
 sudo systemctl enable systemd-timesyncd.service
 timedatectl set-ntp true
-pamac install Teams
+pamac install teams
 
 
