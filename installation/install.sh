@@ -11,6 +11,8 @@ sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf"
 pamac update
 
 # Installation des logs divers
+echo ""
+echo ""
 echo "*****************************"
 echo "Installation des logs divers"
 echo "*****************************"
@@ -22,6 +24,8 @@ pamac install whatsapp-nativefier
 
 
 # Sublime Text
+echo ""
+echo ""
 echo "*****************************"
 echo "Installation Sublime Text"
 echo "*****************************"
@@ -32,6 +36,8 @@ pamac update
 pamac install sublime-text
 
 # Teams
+echo ""
+echo ""
 echo "*****************************"
 echo "Install Teams"
 echo "*****************************"
@@ -41,6 +47,8 @@ timedatectl set-ntp true
 pamac install teams
 
 # Download and install environment Gamaing
+echo ""
+echo ""
 echo "*****************************"
 echo "Download and install environment Gaming"
 echo "*****************************"
@@ -53,6 +61,8 @@ sleep 3
 wget https://github.com/xavatar/vulkan-headers-git/releases/download/1.2.135/vulkan-headers-tkg-git-1.2.135.r0.gfb7f9c9-1-any.pkg.tar.xz
 sudo pacman -U vulkan-headers-tkg-git-1.2.135.r0.gfb7f9c9-1-any.pkg.tar.xz
 
+echo ""
+echo ""
 echo "*****************************"
 echo "Install vulkan-icd-loader-git"
 echo "*****************************"
@@ -63,6 +73,8 @@ wget https://github.com/xavatar/vulkan-icd-loader-git/releases/download/1.2.135.
 sudo pacman -U vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
 pamac install vulkan-tools
 
+echo ""
+echo ""
 echo "*****************************"
 echo "Install spirv + vkd3d"
 echo "*****************************"
@@ -76,6 +88,8 @@ sudo pacman -U lib32-vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
 wget https://github.com/xavatar/vkd3d-git/releases/download/1.1.r689.ga59f198-1a/vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
 sudo pacman -U vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
 
+echo ""
+echo ""
 echo "*****************************"
 echo "Install Wine Staging TKG"
 echo "*****************************"
@@ -84,12 +98,16 @@ pamac install giflib lib32-giflib libpng lib32-libpng  libldap lib32-libldap gnu
 wget https://github.com/xavatar/wine-staging-tkg/releases/download/git-5.4.r10.g7c7868f4-254/wine-tkg-staging-fsync-vkd3d-git-5.4.r10.g7c7868f4-254-x86_64.pkg.tar.xz
 sudo pacman -U wine-tkg-staging-fsync-vkd3d-git-5.4.r10.g7c7868f4-254-x86_64.pkg.tar.xz
 
+echo ""
+echo ""
 echo "*****************************"
 echo "Install Lutris"
 echo "*****************************"
 sleep 3
 pamac install lutris
 
+echo ""
+echo ""
 echo "*****************************"
 echo "Install mingw-w64-gcc"
 echo "*****************************"
@@ -105,6 +123,10 @@ sudo pacman -U mingw-w64-winpthreads-7.0.0-1-any.pkg.tar.xz
 sudo pacman -U mingw-w64-crt-7.0.0-1-any.pkg.tar.xz
 sudo pacman -U mingw-w64-gcc-9.3.0-1-x86_64.pkg.tar.xz
 
-
+echo ""
+echo ""
+echo "*****************************"
+echo " FINISH "
+echo "*****************************"
 
 
