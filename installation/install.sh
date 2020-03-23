@@ -49,3 +49,11 @@ wget https://github.com/xavatar/vulkan-icd-loader-git/releases/download/1.2.135.
 pacman -U lib32-vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
 wget https://github.com/xavatar/vulkan-icd-loader-git/releases/download/1.2.135.r2.gff44f21a0/vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
 pacman -U vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
+pamac install vulkan-tools
+echo ""
+echo "Spirv + vkd3d"
+echo ""
+wget https://github.com/xavatar/spirv-tools-git/releases/download/2020.1.r39.g60104cd9-1/lib32-spirv-tools-tkg-git-2020.1.r39.g60104cd9-1-x86_64.pkg.tar.xz
+pacman -U lib32-spirv-tools-tkg-git-2020.1.r39.g60104cd9-1-x86_64.pkg.tar.xz
+wget https://github.com/xavatar/spirv-tools-git/releases/download/2020.1.r39.g60104cd9-1a/spirv-tools-tkg-git-2020.1.r39.g60104cd9-1-x86_64.pkg.tar.xz
+pacman -U spirv-tools-tkg-git-2020.1.r39.g60104cd9-1-x86_64.pkg.tar.xz
