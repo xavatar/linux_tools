@@ -33,4 +33,15 @@ sudo systemctl enable systemd-timesyncd.service
 timedatectl set-ntp true
 pamac install teams
 
-
+# Download and install environment Gamaing
+echo ""
+echo "Download and install environment Gamaing"
+echo ""
+echo ""
+echo "vulkan-headers-git"
+echo ""
+wget https://github.com/xavatar/vulkan-headers-git/releases/download/1.2.135/vulkan-headers-tkg-git-1.2.135.r0.gfb7f9c9-1-any.pkg.tar.xz
+sudo pacman -U vulkan-headers-tkg-git-1.2.135.r0.gfb7f9c9-1-any.pkg.tar.xz
+echo ""
+echo "vulkan-icd-loader-git"
+echo ""
