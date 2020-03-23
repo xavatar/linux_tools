@@ -57,3 +57,7 @@ wget https://github.com/xavatar/spirv-tools-git/releases/download/2020.1.r39.g60
 pacman -U lib32-spirv-tools-tkg-git-2020.1.r39.g60104cd9-1-x86_64.pkg.tar.xz
 wget https://github.com/xavatar/spirv-tools-git/releases/download/2020.1.r39.g60104cd9-1a/spirv-tools-tkg-git-2020.1.r39.g60104cd9-1-x86_64.pkg.tar.xz
 pacman -U spirv-tools-tkg-git-2020.1.r39.g60104cd9-1-x86_64.pkg.tar.xz
+wget https://github.com/xavatar/vkd3d-git/releases/download/1.1.r689.ga59f198-1/lib32-vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
+pacman -U lib32-vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
+wget https://github.com/xavatar/vkd3d-git/releases/download/1.1.r689.ga59f198-1a/vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
+pacman -U vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
