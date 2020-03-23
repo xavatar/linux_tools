@@ -61,3 +61,11 @@ wget https://github.com/xavatar/vkd3d-git/releases/download/1.1.r689.ga59f198-1/
 pacman -U lib32-vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
 wget https://github.com/xavatar/vkd3d-git/releases/download/1.1.r689.ga59f198-1a/vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
 pacman -U vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
+echo ""
+echo "Wine Staging TKG"
+echo ""
+wget https://github.com/xavatar/wine-staging-tkg/releases/download/git-5.4.r10.g7c7868f4-254/wine-tkg-staging-fsync-vkd3d-git-5.4.r10.g7c7868f4-254-x86_64.pkg.tar.xz
+pacman -U wine-tkg-staging-fsync-vkd3d-git-5.4.r10.g7c7868f4-254-x86_64.pkg.tar.xz
+
+
+
