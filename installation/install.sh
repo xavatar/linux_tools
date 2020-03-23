@@ -45,3 +45,7 @@ sudo pacman -U vulkan-headers-tkg-git-1.2.135.r0.gfb7f9c9-1-any.pkg.tar.xz
 echo ""
 echo "vulkan-icd-loader-git"
 echo ""
+wget https://github.com/xavatar/vulkan-icd-loader-git/releases/download/1.2.135.r2.gff44f21a0-1/lib32-vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
+pacman -U lib32-vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
+wget https://github.com/xavatar/vulkan-icd-loader-git/releases/download/1.2.135.r2.gff44f21a0/vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
+pacman -U vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
