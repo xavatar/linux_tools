@@ -13,7 +13,9 @@ pamac update
 echo ""
 echo "Installation des logs divers"
 echo ""
-pamac install ccache vim nodejs-nativefier whatsapp-nativefier
+pamac install ccache vim 
+pamac install nodejs-nativefier 
+pamac install whatsapp-nativefier
 
 
 # Sublime Text
