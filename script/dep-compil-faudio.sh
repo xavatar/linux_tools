@@ -17,6 +17,7 @@ pamac install lib32-libomxil-bellagio
 pamac install lib32-opencore-amr
 pamac install lib32-openjpeg2
 pamac install lib32-x264
+pamac install lib32-numactl
 pamac install lib32-x265
 pamac install lib32-xvidcore
 pamac install lib32-ffmpeg
