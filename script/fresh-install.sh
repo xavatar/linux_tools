@@ -4,11 +4,22 @@
 
 # Enable AUR
 echo "**********************"
-echo "Enable AUR"
+echo "Enable AUR + MAJ"
 echo "**********************"
 sleep 3
 sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf"
+sudo sed --in-place "s/#CheckAURUpdates/CheckAURUpdates/" "/etc/pamac.conf"
 pamac update
+
+
+# Enable repo.xavatar.com
+echo "**********************"
+echo "Enable repo.xavatar.com"
+echo "**********************"
+sleep 3
+echo -e "\n[repo.xavatar.com]\nSigLevel = Optional TrustAll\nServer = http://repo.xavatar.com" | sudo tee -a /etc/pacman.conf
+pamac update
+
 
 # Installation des logs divers
 echo ""
@@ -22,12 +33,33 @@ pamac install github-desktop-bin
 pamac install nodejs-nativefier 
 pamac install whatsapp-nativefier
 
+
+# Installation des logs compil TKG
 echo ""
 echo ""
 echo "*****************************"
 echo "Installation des logs compil TKG"
 echo "*****************************"
+# dep proton-tkg
 pamac install python-fonttools
+# dep faudio
+pamac install lib32-aom
+pamac install lib32-gsm
+pamac install lib32-lame
+pamac install lib32-libass
+pamac install lib32-libbluray
+pamac install meson-cross-x86-linux-gnu
+pamac install lib32-glslang
+pamac install lib32-shaderc
+pamac install lib32-libplacebo
+pamac install lib32-dav1d
+pamac install lib32-libomxil-bellagio
+pamac install lib32-opencore-amr
+pamac install lib32-openjpeg2
+pamac install lib32-x264
+pamac install lib32-x265
+pamac install lib32-xvidcore
+pamac install lib32-ffmpeg
 
 
 # Sublime Text
@@ -42,6 +74,7 @@ echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable
 pamac update
 pamac install sublime-text
 
+
 # Teams
 echo ""
 echo ""
@@ -53,7 +86,8 @@ sudo systemctl enable systemd-timesyncd.service
 timedatectl set-ntp true
 pamac install teams
 
-# Download and install environment Gamaing
+
+# Download and install environment Gaming
 echo ""
 echo ""
 echo "*****************************"
@@ -65,8 +99,7 @@ echo "*****************************"
 echo "Install vulkan-headers-git"
 echo "*****************************"
 sleep 3
-wget https://github.com/xavatar/vulkan-headers-git/releases/download/1.2.135/vulkan-headers-tkg-git-1.2.135.r0.gfb7f9c9-1-any.pkg.tar.xz
-sudo pacman -U vulkan-headers-tkg-git-1.2.135.r0.gfb7f9c9-1-any.pkg.tar.xz
+pamac install vulkan-headers-tkg-git
 
 echo ""
 echo ""
@@ -74,10 +107,8 @@ echo "*****************************"
 echo "Install vulkan-icd-loader-git"
 echo "*****************************"
 sleep 3
-wget https://github.com/xavatar/vulkan-icd-loader-git/releases/download/1.2.135.r2.gff44f21a0-1/lib32-vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
-sudo pacman -U lib32-vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
-wget https://github.com/xavatar/vulkan-icd-loader-git/releases/download/1.2.135.r2.gff44f21a0/vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
-sudo pacman -U vulkan-icd-loader-git-1.2.135.r2.gff44f21a0-1-x86_64.pkg.tar.xz
+pamac install lib32-vulkan-icd-loader-git
+pamac install vulkan-icd-loader-git
 pamac install vulkan-tools
 
 echo ""
@@ -86,14 +117,10 @@ echo "*****************************"
 echo "Install spirv + vkd3d"
 echo "*****************************"
 sleep 3
-wget https://github.com/xavatar/spirv-tools-git/releases/download/2020.1.r39.g60104cd9-1/lib32-spirv-tools-tkg-git-2020.1.r39.g60104cd9-1-x86_64.pkg.tar.xz
-sudo pacman -U lib32-spirv-tools-tkg-git-2020.1.r39.g60104cd9-1-x86_64.pkg.tar.xz
-wget https://github.com/xavatar/spirv-tools-git/releases/download/2020.1.r39.g60104cd9-1a/spirv-tools-tkg-git-2020.1.r39.g60104cd9-1-x86_64.pkg.tar.xz
-sudo pacman -U spirv-tools-tkg-git-2020.1.r39.g60104cd9-1-x86_64.pkg.tar.xz
-wget https://github.com/xavatar/vkd3d-git/releases/download/1.1.r689.ga59f198-1/lib32-vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
-sudo pacman -U lib32-vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
-wget https://github.com/xavatar/vkd3d-git/releases/download/1.1.r689.ga59f198-1a/vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
-sudo pacman -U vkd3d-tkg-git-1.1.r689.ga59f198-1-x86_64.pkg.tar.xz
+pamac install lib32-spirv-tools-tkg-git
+pamac install spirv-tools-tkg-git
+pamac install lib32-vkd3d-tkg-git
+pamac install vkd3d-tkg-git
 
 echo ""
 echo ""
@@ -102,8 +129,7 @@ echo "Install Wine Staging TKG"
 echo "*****************************"
 sleep 3
 pamac install giflib lib32-giflib libpng lib32-libpng  libldap lib32-libldap gnutls lib32-gnutls mpg123 lib32-mpg123 openal  lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse  libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib  lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite  libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt   lib32-libxinerama ncurses lib32-ncurses opencl-icd-loader  lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva gtk3  lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs
-wget https://github.com/xavatar/wine-staging-tkg/releases/download/git-5.4.r10.g7c7868f4-254/wine-tkg-staging-fsync-vkd3d-git-5.4.r10.g7c7868f4-254-x86_64.pkg.tar.xz
-sudo pacman -U wine-tkg-staging-fsync-vkd3d-git-5.4.r10.g7c7868f4-254-x86_64.pkg.tar.xz
+pamac install wine-tkg-staging-fsync-vkd3d-git
 
 echo ""
 echo ""
@@ -119,16 +145,11 @@ echo "*****************************"
 echo "Install mingw-w64-gcc"
 echo "*****************************"
 sleep 3
-wget https://github.com/xavatar/mingw/releases/download/2.34-1/mingw-w64-binutils-2.34-1-x86_64.pkg.tar.xz
-wget https://github.com/xavatar/mingw/releases/download/7.0.0-1a/mingw-w64-headers-7.0.0-1-any.pkg.tar.xz
-wget https://github.com/xavatar/mingw/releases/download/7.0.0-1b/mingw-w64-winpthreads-7.0.0-1-any.pkg.tar.xz
-wget https://github.com/xavatar/mingw/releases/download/7.0.0-1/mingw-w64-crt-7.0.0-1-any.pkg.tar.xz
-wget https://github.com/xavatar/mingw/releases/download/9.3.0-1/mingw-w64-gcc-9.3.0-1-x86_64.pkg.tar.xz
-sudo pacman -U mingw-w64-binutils-2.34-1-x86_64.pkg.tar.xz
-sudo pacman -U mingw-w64-headers-7.0.0-1-any.pkg.tar.xz
-sudo pacman -U mingw-w64-winpthreads-7.0.0-1-any.pkg.tar.xz
-sudo pacman -U mingw-w64-crt-7.0.0-1-any.pkg.tar.xz
-sudo pacman -U mingw-w64-gcc-9.3.0-1-x86_64.pkg.tar.xz
+pamac install mingw-w64-binutils
+pamac install mingw-w64-headers
+pamac install mingw-w64-winpthreads
+pamac install mingw-w64-crt
+pamac install mingw-w64-gcc
 
 
 echo ""
