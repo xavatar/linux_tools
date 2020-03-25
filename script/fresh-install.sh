@@ -21,6 +21,7 @@ pamac install ccache vim
 pamac install github-desktop-bin
 pamac install nodejs-nativefier 
 pamac install whatsapp-nativefier
+pamac install python-fonttools
 
 
 # Sublime Text
