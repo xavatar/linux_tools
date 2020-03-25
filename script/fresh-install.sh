@@ -17,7 +17,7 @@ echo "**********************"
 echo "Enable repo.xavatar.com"
 echo "**********************"
 sleep 3
-echo -e "\n[repo.xavatar.com]\nSigLevel = Optional TrustAll\nServer = http://repo.xavatar.com" | sudo tee -a /etc/pacman.conf
+echo -e "\n[repo.xavatar.com]\nSigLevel = Optional TrustAll\nServer = https://repo.xavatar.com" | sudo tee -a /etc/pacman.conf
 pamac update
 
 
