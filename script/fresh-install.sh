@@ -9,7 +9,7 @@ echo "**********************"
 sleep 3
 sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf"
 sudo sed --in-place "s/#CheckAURUpdates/CheckAURUpdates/" "/etc/pamac.conf"
-pamac update
+sudo pacman -Syu
 
 
 # Enable repo.xavatar.com
@@ -18,7 +18,7 @@ echo "Enable repo.xavatar.com"
 echo "**********************"
 sleep 3
 echo -e "\n[repo.xavatar.com]\nSigLevel = Optional TrustAll\nServer = https://repo.xavatar.com" | sudo tee -a /etc/pacman.conf
-pamac update
+sudo pacman -Syu
 
 
 # Installation des logs divers
@@ -61,6 +61,7 @@ pamac install lib32-numactl
 pamac install lib32-x265
 pamac install lib32-xvidcore
 pamac install lib32-ffmpeg
+# dep divers
 pamac install rhash
 pamac install cmake
 pamac install python-lxml
@@ -75,7 +76,7 @@ echo "*****************************"
 sleep 3
 curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg
 echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
-pamac update
+sudo pacman -Syu
 pamac install sublime-text
 
 
