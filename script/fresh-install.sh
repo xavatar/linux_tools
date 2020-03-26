@@ -61,7 +61,10 @@ pamac install lib32-numactl
 pamac install lib32-x265
 pamac install lib32-xvidcore
 pamac install lib32-ffmpeg
-
+pamac install rhash
+pamac install cmake
+pamac install python-lxml
+pamac install spirv-headers-git
 
 # Sublime Text
 echo ""
